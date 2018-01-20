@@ -21,27 +21,51 @@ var cards = [
 	cardImage: "images/king-of-diamonds.png"
 }
 ];
-var cardID;
+var cardId = [];
 var cardsInPlay = [];
-cardsInPlay.push(cards[cardID]);
-
+var cardImage = [];
 var checkForMatch = function (){
-if(cardsInPlay.length === 2 && cardsInPlay[0] === cardsInPlay[1]){alert("You found a match");
-} else {alert("Sorry, try again")}
-//if (cardsInPlay[0] === cardsInPlay[1]){
-//	console.log("You found a match!");
-//}else{console.log("Sorry, try again.");
-//}
+	cardsInPlay.push("cards[cardId].rank");
+	console.log(cardsInPlay);
+	if(cardsInPlay.length === 2){if (cardsInPlay[0] === cardsInPlay[1]){alert("You found a match");
+	}else {alert("Sorry, try again")};
+}
+	//if (cardsInPlay[0] === cardsInPlay[1]){
+	//	console.log("You found a match!");
+	//}else{console.log("Sorry, try again.");
+	//}
+	};
+var flipCard = function (){
+	var cardId = this.getAttribute("data-id");
+	this.setAttribute("src" , cards[cardId].cardImage);
+	checkForMatch();
+	// if else was originally here
+	console.log("User flipped " + cards[cardId].rank);
+	console.log(cards[cardId].cardImage);
+	console.log(cards[cardId].suit);
 };
-var flipCard = function (cardID){
-checkForMatch();
-// if else was originally here
-console.log("User flipped " + cards[cardID].rank);
-console.log(cards[cardID].cardImage);
-console.log(cards[cardID].suit);
+var createBoard = function (){
+	for (var i = 0; i < cards.length; i++){
+	var cardElement = document.createElement("img");
+	cardElement.setAttribute("src","images/back.png");
+	cardElement.setAttribute("data-id", i);
+	//data-id.setAttribute('index',i);
+	document.getElementsByTagName("cardElement")[0];
+	//document.getElementsByClassName("game-board")[0].appendChild("cardElement");
+	//document.getElementsByClassName('game-board')[0].appendChild('cardElement');
+	document.getElementsByClassName("gameBoard")[0];
+	gameBoard.appendChild(cardElement);
+	cardElement.addEventListener("click",flipCard);
+	//addEventListeners("click", flipCard);
+	};
 };
-flipCard(0);
-flipCard(2);
+createBoard();
+
+//cardImage.setAttribute("cardImage", cards);
+//console.log(cards[cardId].cardImage);
+
+//flipCard(0);
+//flipCard(2);
 
 //console.log("User flipped" + cardOne);
 //console.log("User flipped" + cardThree);
