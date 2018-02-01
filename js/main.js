@@ -62,6 +62,27 @@ var createBoard = function (){
 };
 createBoard();
 
+//document.getElementById("myBtn").addEventListener("click",function(){
+//	document.getElementById("demo").innerHTML = "Hit Refresh";
+//});
+
+//var myBtn = [];
+function myFunction(){
+	var x = document.createElement("myBtn");
+//	var t = document.createTextNode("Hit Refresh...lol");
+	var t = document.location.reload();
+	x.appendChild(t);
+	document.body.appendChild(x);
+}
+	myBtn.addEventListener("click", myFunction);
+//onclick.addEventListeners("click",myFunction);
+//myFunction();
+//var onclick = function(){
+//	document.createElement("BUTTON");
+//	BUTTON.addEventListeners("click", reload);
+//}
+
+
 //cardImage.setAttribute("cardImage", cards);
 //console.log(cards[cardId].cardImage);
 
