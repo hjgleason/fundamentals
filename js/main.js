@@ -62,11 +62,7 @@ var createBoard = function (){
 };
 createBoard();
 
-//document.getElementById("myBtn").addEventListener("click",function(){
-//	document.getElementById("demo").innerHTML = "Hit Refresh";
-//});
-
-//var myBtn = [];
+//adding refresh button below
 function myFunction(){
 	var x = document.createElement("myBtn");
 //	var t = document.createTextNode("Hit Refresh...lol");
@@ -75,6 +71,8 @@ function myFunction(){
 	document.body.appendChild(x);
 }
 	myBtn.addEventListener("click", myFunction);
+
+//code test elements below	
 //onclick.addEventListeners("click",myFunction);
 //myFunction();
 //var onclick = function(){
