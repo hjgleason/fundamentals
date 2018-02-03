@@ -21,6 +21,10 @@ var cards = [
 	cardImage: "images/king-of-diamonds.png"
 }
 ];
+//unsuccessful attemp at randomizing, but no JS error
+//cards.sort(() => Math.random());
+cards.sort(function(){return 0.5 - Math.random() });
+
 //var cardId = [];
 var cardsInPlay = [];
 var cardImage = [];
